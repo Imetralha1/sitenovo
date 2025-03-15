@@ -13,8 +13,9 @@
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
-        header{
-            display:flex;
+
+        header {
+            display: flex;
             justify-content: space-between;
             align-items: center;
             background-color: blueviolet;
@@ -22,18 +23,50 @@
             padding: 15px 20px;
 
         }
-        .banner img{
+
+        .banner img {
             width: 300px;
         }
 
-        .links{
-            display:flex ;
+        .links {
+            display: flex;
             justify-content: center;
             align-items: center;
-            background-color:aliceblue ;
+            background-color: aliceblue;
             color: black;
         }
 
+        .menu-toggle {
+            display: none;
+        }
+
+        .nav-links {
+            display: block;
+        }
+
+        @media (max-width:800px) {
+            .menu-toggle {
+                display: block;
+                font-size: 25pt;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            .nav-links {
+                background-color: rgb(25, 22, 25);
+                font: size 18pt;
+                ;
+                width: 100vw;
+                position: absolute;
+                text-align: center;
+                top: 48px;
+                left: 0;
+                display: none;
+            }
+
+        }
     </style>
 
 <body>
@@ -42,30 +75,47 @@
             Vitória
 
         </div>
-        <nav>
+        <div class="menu-toggle">☰</div>
+        <nav class="nav-links">
             <ul>
                 <li>link</li>
                 <li>link</li>
                 <li>link</li>
             </ul>
         </nav>
-        
-    </head>
-</header>
-<br>
-        <section class="banner">
-            <img src="meeple.webp" alt="">
 
-        </section>
+        </head>
+    </header>
+    <br>
+    <section class="banner">
+        <img src="meeple.webp" alt="">
 
-        <section class='link'>
-            <a href=link></a>
-            <a href="link"></a>
-            <a href="link"></a>
-        </section>
+    </section>
+
+    <section class='link'>
+        <a href=link></a>
+        <a href="link"></a>
+        <a href="link"></a>
+    </section>
+    <footer> </footer>
+
+    <script>
+        function abrirMenu(){
+            let menu = document.getElementById("menu")
+                if(menu.style.display === "none"){
+                menu.style.display="block"
+            }else{
+                menu.style.display = "none"
+            }
+        }
 
 
-    
+
+    </script>
+
+
+
+
 
 </body>
 
