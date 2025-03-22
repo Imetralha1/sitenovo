@@ -39,11 +39,13 @@
         .menu-toggle {
             display: none;
         }
+        
 
-        .nav-links {
+        
+        .nav-links{ 
             display: block;
         }
-
+        
         @media (max-width:800px) {
             .menu-toggle {
                 display: block;
@@ -54,6 +56,10 @@
                 list-style: none;
             }
 
+            .nav-links li {
+                margin: 30px 0px;
+            }
+
             .nav-links {
                 background-color: rgb(25, 22, 25);
                 font: size 18pt;
@@ -61,7 +67,7 @@
                 width: 100vw;
                 position: absolute;
                 text-align: center;
-                top: 48px;
+                top: 74px;
                 left: 0;
                 display: none;
             }
@@ -72,11 +78,11 @@
 <body>
     <header>
         <div>
-            Vitória
+            Meeple
 
         </div>
-        <div class="menu-toggle">☰</div>
-        <nav class="nav-links">
+        <div class="menu-toggle" onclick="abrirMenu()">☰</div>
+        <nav class="nav-links" id="menu">
             <ul>
                 <li>link</li>
                 <li>link</li>
@@ -89,22 +95,31 @@
     <br>
     <section class="banner">
         <img src="meeple.webp" alt="">
+        <br>
+        <div>
+            <h1>Quem é Meeple?</h1>
+           <p>O Meeple é um personagem do tipo Controle e de raridade Épica. 
+            Ele é um ser misterioso que conhece toda regra de todo jogo de tabuleiro, como uma obsessão. Na presença de Meeple, ninguém pode quebrar as regras, só Meeple.</h1>
+
+        </div>
 
     </section>
 
     <section class='link'>
-        <a href=link></a>
+        <a href="link"></a>
         <a href="link"></a>
         <a href="link"></a>
     </section>
-    <footer> </footer>
+    <footer>
+         </footer>
 
     <script>
-        function abrirMenu(){
+        function abrirMenu() {
             let menu = document.getElementById("menu")
-                if(menu.style.display === "none"){
-                menu.style.display="block"
-            }else{
+
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block"
+            } else {
                 menu.style.display = "none"
             }
         }
