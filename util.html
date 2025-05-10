@@ -20,5 +20,36 @@
 
      setInterval(atualizarRelogio, 1000)
     </script>
+
+      <h3> contador regressivo</h3>
+     <input type="date" id="dataSelecionada">
+     <button onclick="iniciarContagem()">iniciar Contagem</button>
+     <script>
+         
+     function iniciarContagem(){
+        console.log("teste!")
+
+        const agora = new Date();
+        const dataSelecionada = document.getElementById("dataSelecionada").value
+        const dataFim = new Date(dataSelecionada)
+        const diferenca = dataFim - agora
+
+        const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24))
+        const horas = Math.floor ((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        const minutos = Math.floor ((diferenca % (1000 * 60 * 60 )) / (1000 * 60))
+        const segundos = Math.floor ((diferenca % (1000 * 60 )) / 1000)
+        
+        
+        console.log(agora)
+        console.log(dataSelecionada)
+        console.log(dataFim)
+        
+        console.log(dias)
+        console.log(horas)
+        console.log(minutos)
+        console.log(segundos)
+     }
+     
+     </script>
 </body>
 </html>
