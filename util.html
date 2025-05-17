@@ -24,9 +24,10 @@
       <h3> contador regressivo</h3>
      <input type="date" id="dataSelecionada">
      <button onclick="iniciarContagem()">iniciar Contagem</button>
+     <div class="relogio" id="contador"> 0 dias e 00:00:00</div>
      <script>
          
-     function iniciarContagem(){
+     function contar(){
         console.log("teste!")
 
         const agora = new Date();
@@ -34,20 +35,22 @@
         const dataFim = new Date(dataSelecionada)
         const diferenca = dataFim - agora
 
-        const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24))
-        const horas = Math.floor ((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-        const minutos = Math.floor ((diferenca % (1000 * 60 * 60 )) / (1000 * 60))
-        const segundos = Math.floor ((diferenca % (1000 * 60 )) / 1000)
+        let dias = Math.floor(diferenca / (1000 * 60 * 60 * 24))
+        let horas = Math.floor ((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutos = Math.floor ((diferenca % (1000 * 60 * 60 )) / (1000 * 60));
+        let segundos = Math.floor ((diferenca % (1000 * 60 )) / 1000);
+
+        horas = String(horas).padStart(2,0)
+        minutos = String(minutos).padStart(2,0)
+        segundos = String(segundos).padStart(2,0)
+
+        document.getElementById("contador").textContent = `${dias} dias ${horas}:${minutos}:${segundos}`;
+
         
-        
-        console.log(agora)
-        console.log(dataSelecionada)
-        console.log(dataFim)
-        
-        console.log(dias)
-        console.log(horas)
-        console.log(minutos)
-        console.log(segundos)
+    }
+
+    function iniciarContagem(){
+       setInterval(contar, 1000)
      }
      
      </script>
