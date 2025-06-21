@@ -1,0 +1,49 @@
+
+
+<input id="input" placeholder="Digite um item">
+<button id="botao" onclick="nomeDaFuncao()" >Adicionar</button>
+<div id="lista"></div>
+<script>
+ 
+
+ function nomeDaFuncao(){
+ 
+     let input = document.getElementById("input")  
+     let lista = document.getElementById("lista")
+    
+    let div = document.createElement("div")
+    let texto = document.createTextNode(input.value)
+    
+    let check = document.createElement("input")
+    check.type = "checkbox"
+    check.value = input.value
+    div.appendChild(check)
+    div.appendChild(texto)
+
+    lista.appendChild(div)
+    input.value = ""
+}
+   function NomeDaFuncao(){
+     window.alert ("o site já terminou de carregar")
+   }
+   window.addEventListener("load", NomeDaFuncao())
+
+    
+    
+</script>
+
+<style>
+  #lista{border-style: groove;}
+  #lista div {
+    p.round3 {
+  border: 2px solid rgb(218, 0, 156);
+  border-radius: 12px;
+  padding: 5px;
+} 
+    background-color: rgb(238, 0, 255);
+    max-width: 600px;
+}
+</style>
+
+
+    
