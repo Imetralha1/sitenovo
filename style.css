@@ -111,3 +111,43 @@ nav#menu ul {
     display: flex;
     gap: 22px;
 }
+
+@media (min-width:1024px) {
+    .gadjets {
+        display: grid;
+        grid-template-columns: 40% 40%;
+        grid-template-rows: auto auto auto;
+        justify-items: stretch;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+        align-content: stretch;
+    }
+
+    .gadjets div {
+        text-align: center;
+        box-shadow: 0 0 20px 3px black;
+        border-radius: 42px;
+        padding: 2rem;
+    }
+
+    .titulo {
+        margin: 1rem;
+        text-align: center;
+        font-size: 40pt;
+
+
+    }
+
+    img.meeple {
+        width: 300px;
+        margin: 20px;
+    }
+
+    .imeeple {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 7%;
+    }
+}

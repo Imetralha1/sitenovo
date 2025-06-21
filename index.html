@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -33,15 +32,16 @@
     </header>
     <br>
     <section class="banner">
-        <div>
-            <img src="meeple (1).webp" alt="">
+        <div class="imeeple">
+            <img src="meeple (1).webp" class="meeple" alt="">
 
-
-            <h1>Meeple</h1>
-            <p> Meeple is an epic brawler, of the control class.
-                He knows the rules to every board game in existence and if you break them.
-                .. Well let's just say you don't want to break them. They hate cheaters and those who
-                don't follow the rules. There's one exception to the rules... Meeple themselves!</h1>
+            <div>
+                <h1 class="titulo">Meeple</h1>
+                <p> Meeple is an epic brawler, of the control class.
+                    He knows the rules to every board game in existence and if you break them.
+                    .. Well let's just say you don't want to break them. They hate cheaters and those who
+                    don't follow the rules. There's one exception to the rules... Meeple themselves!</h1>
+            </div>
         </div>
 
         <section class='link'>
@@ -49,44 +49,51 @@
             <a href="link"></a>
             <a href="link"></a>
         </section>
-        <div>
-            <h2>GADJETS</h2>
-            <img src="acessorio.png" alt="" width="150" height="400">
-            <h3>Ragequit</h3>
-            <p>Meeple lashes out in rage at nearby enemies, stunning them and knocking them back.
-                Ragequit stuns for a longer period of time the fewer hitpoints Meeple has.</p>
-            <br>
-            <img src="acessorio2.png" alt="" width="150" height="400">
-            <h3>Mansions of Meeple</h3>
-            <p>Meeple's next attack creates dice towers around the impact area and deals 500 damage.</p>
+
+        <h2 class="titulo">GADJETS</h2>
+        <div class="gadjets">
+            <div> <img src="acessorio.png" alt="" width="150" height="400">
+                <h3>Ragequit</h3>
+                <p>Meeple lashes out in rage at nearby enemies, stunning them and knocking them back.
+                    Ragequit stuns for a longer period of time the fewer hitpoints Meeple has.</p>
+            </div>
+            <div><img src="acessorio2.png" alt="" width="150" height="400">
+                <h3>Mansions of Meeple</h3>
+                <p>Meeple's next attack creates dice towers around the impact area and deals 500 damage.</p>
+            </div>
+            <h2 class="titulo">STAR POWERS</h2>
+            <span></span>
             <div>
-                <h2>STAR POWERS</h2>
                 <img src="powerstar1.png" alt="" width="150" height="400">
                 <h3>Do Not Pass Go</h3>
                 <p>When you shoot through environment, deal 300 more damage.</p>
-                <br>
-                <img src="power star2.webp" alt="" width="150" height="400">
+            </div>
+            <div> <img src="power star2.webp" alt="" width="150" height="400">
                 <h3>Rule Bending</h3>
                 <p>Critical success also increases allies' reload speed within the area by 20%.</p>
             </div>
 
-            <footer>
 
-            </footer>
-            <script>
-                function abrirMenu() {
-                    
-                    let menu = document.getElementById("menu")
 
-                    if (menu.style.display === "none" || menu.style.display === "") {
-                        menu.style.display = "block"
-                    } else {
-                        menu.style.display = "none"
-                    }
+        </div>
+
+        <footer>
+
+        </footer>
+        <script>
+            function abrirMenu() {
+
+                let menu = document.getElementById("menu")
+
+                if (menu.style.display === "none" || menu.style.display === "") {
+                    menu.style.display = "block"
+                } else {
+                    menu.style.display = "none"
                 }
+            }
 
 
-            </script>
+        </script>
 
 
 
